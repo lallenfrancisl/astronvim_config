@@ -18,3 +18,4 @@ end
 require "lazy_setup"
 require "polish"
 
+vim.opt.tabstop = 4
