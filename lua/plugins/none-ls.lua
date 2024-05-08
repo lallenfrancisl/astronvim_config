@@ -13,6 +13,7 @@ return {
     config.sources = {
       -- Set a formatter
       require "none-ls.diagnostics.eslint_d",
+      require "none-ls.code_actions.eslint",
     }
     return config -- return final config table
   end,
