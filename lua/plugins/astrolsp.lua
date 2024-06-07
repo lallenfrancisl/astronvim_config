@@ -58,6 +58,9 @@ return {
               languages = { "vue" },
             },
           },
+          preferences = {
+            importModuleSpecifierPreference = "non-relative",
+          },
         },
         filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
       },
