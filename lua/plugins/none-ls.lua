@@ -12,8 +12,8 @@ return {
     -- https://github.com/nvimtools/none-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
     config.sources = {
       -- Set a formatter
-      require "none-ls.diagnostics.eslint_d",
-      require "none-ls.code_actions.eslint",
+      -- require "none-ls.diagnostics.eslint_d",
+      -- require "none-ls.code_actions.eslint_d",
     }
     return config -- return final config table
   end,
