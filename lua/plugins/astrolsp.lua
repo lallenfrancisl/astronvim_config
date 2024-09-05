@@ -4,9 +4,9 @@
 --       as this provides autocomplete and documentation while editing
 
 require("mason").setup()
-local mason_registry = require "mason-registry"
-local vue_language_server_path = mason_registry.get_package("vue-language-server"):get_install_path()
-  .. "/node_modules/@vue/language-server"
+-- local mason_registry = require "mason-registry"
+-- local vue_language_server_path = mason_registry.get_package("vue-language-server"):get_install_path()
+--   .. "/node_modules/@vue/language-server"
 
 ---@type LazySpec
 return {
@@ -49,21 +49,54 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
-      tsserver = {
-        init_options = {
-          plugins = {
-            {
-              name = "@vue/typescript-plugin",
-              location = vue_language_server_path,
-              languages = { "vue" },
-            },
-          },
-          preferences = {
-            importModuleSpecifierPreference = "non-relative",
-          },
-        },
-        filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
-      },
+      -- tsserver = {
+      --   init_options = {
+      --     -- plugins = {
+      --       -- {
+      --       --   name = "@vue/typescript-plugin",
+      --       --   location = vue_language_server_path,
+      --       --   languages = { "vue" },
+      --       -- },
+      --     -- },
+      --     preferences = {
+      --       importModuleSpecifierPreference = "non-relative",
+      --     },
+      --   },
+      --   filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+      -- },
+      -- vtsls = {
+      --   settings = {
+      --     typescript = {
+      --       preferences = {
+      --         importModuleSpecifier = "non-relative",
+      --       }
+      --     },
+      --     javascript = {
+      --       preferences = {
+      --         importModuleSpecifier = "non-relative",
+      --       }
+      --     },
+      --     vtsls = {
+      --       autoUseWorkspaceTsdk = true,
+      --       experimental = {
+      --         completion = {
+      --           enableServerSideFuzzyMatch = true,
+      --         },
+      --       },
+      --       tsserver = {
+      --         globalPlugins = {
+      --           {
+      --             name = "@vue/typescript-plugin",
+      --             location = vue_language_server_path,
+      --             languages = { "vue" },
+      --             enableForWorkspaceTypeScriptVersions = true
+      --           },
+      --         },
+      --       },
+      --     }
+      --   },
+      --   filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+      -- },
     },
     -- customize how language servers are attached
     handlers = {
