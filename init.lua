@@ -45,3 +45,4 @@ end
 
 vim.cmd "command! RemoveQFItem lua Remove_qf_item()"
 vim.api.nvim_command "autocmd FileType qf nnoremap <buffer> dd :RemoveQFItem<cr>"
+

@@ -6,5 +6,6 @@
 return {
   { "AstroNvim/astrocommunity" },
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.pack.vue" },
+  -- { import = "astrocommunity.pack.vue" },
+  { import = "astrocommunity.editing-support.bigfile-nvim" },
 }
